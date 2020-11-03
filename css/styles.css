@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+/* ----- Estilos Generales ----- */
+
+html {
+    margin: 0px
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    background: rgb(10, 0, 167);
+    background: linear-gradient(90deg, rgba(250, 0, 0, 1) 0%, rgba(250, 79, 0, 1) 51%);
+    font-family: 'Montserrat', sans-serif!important;
+    color: white;
+    margin: 0;
+	padding: 0;
+}
+
+h1 {
+    font-size: 3rem;
+    /*text-align: center;*/
+}
+nav {
+	/*height: 10vh;*/
+	background-color: #333333;
+	position: fixed;
+}
+
+@media (min-width: 720px) { 
+	.navbar {
+		height: 9vh;
+		position: fixed;
+	}
+	.edu-card{
+		width: 30vw;
+	}
+	.contact {
+		/*padding-right: 2em;*/
+		margin: 2em;
+		box-sizing: content-box;
+	}
+	.contact>div {
+		padding-left: 0.5em;
+		box-sizing: content-box;
+	}
+
+	#section-name {
+    	/*padding-right: 7rem;*/
+	}
+
+	.modal-dialogg {
+		max-width: 45vw;
+		/*width: 70vw;*/
+		margin: auto;
+	}
+
+	#section-name > h1 {
+	margin-right: 8%;
+	box-sizing: content-box;
+	}
+	.jobs-card{
+		width: 30vw;
+	}
+
+	.curses-element {
+		display: flex;
+		justify-content: center;
+		/*flex-direction: column;*/
+		align-items: center;
+		margin: 1% 10% 1% 10%;
+		width: 10%;
+	}
+
+	.class-about {
+		width: 90vw;
+		/*margin: auto;*/
+
+	}
+/*	section {
+		max-width: 90%;
+		margin:auto;
+	}*/
+	.jobs-port-card {
+		justify-content: flex-end;
+		max-width: 50%;
+	}
+	.edu-port-card {
+		flex-wrap: nowrap;
+	}
+	.edu-port-card {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		flex-wrap: nowrap;
+	}
+	#about {
+		display: flex;
+		flex-direction: row;
+	}
+}
+@media only screen and (min-width: 480px) and (max-width: 720px) {
+	#about {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.curses-element {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 48%;
+	margin: 1%;
+	}
+
+	.modal-dialogg {
+		max-width: 75vw;
+	}
+
+}
+
+@media only screen and (max-width: 480px) {
+	#about {
+		display: flex;
+		flex-direction: column;
+	}
+	.modal-dialogg {
+		max-width: 90vw;
+	}
+
+	.curses-element {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 80%;
+	margin: 1%;
+	}
+}
+
+a {
+	color: white;
+}
+
+a:hover {
+	color: white;
+	text-decoration: none;
+}
+
+h1 {
+	margin-left: 0.6rem;
+}
+
+.row-marketing {
+	display: flex;
+	margin-bottom: 2em;
+	margin-top: 2em;
+	flex-wrap: wrap;
+}
+
+.marketing{
+	background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    
+}
+
+#navbarNavAltMarkup {
+	justify-content: flex-end;
+	margin-right: 3em;
+}
+
+.back-to-top {
+	background-image: initial;
+    /*background-color: rgb(0, 98, 204);*/
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #007bff;
+    color: #fff;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 1;
+    font-size: 16px;
+    border-radius: 50%;
+    right: 15px;
+    bottom: 15px;
+    transition: background 0.5s;
+    z-index: 11;
+}
+
+.sections {
+	padding-top: 10vh;
+	/*margin-top: 10vh;*/
+	box-sizing: border-box; 
+	min-height: 100vh;
+	width: 100%;
+	margin-bottom: 0px;
+}
+
+#logo {
+	color: white;
+	width: "30";
+	height: "30";
+}
+#education {
+	background-color: pink;
+}
+#section-name {
+	background-color: yellow;
+    /*margin-right: 10%;*/
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    /*padding-right: 03rem;*/
+
+}
+
+#section-name > h2 {
+	display: block;
+	background-color: black;
+	margin: 1em;
+	text-align:right;
+	width: 100%;
+	padding: 0.3em;
+	box-sizing: content-box;
+}
+
+#section-name > h1 {
+	padding-left: 5% !important;
+	padding-right: 3%;
+	box-sizing: content-box;
+}
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: center;
+	padding-right: 0em;
+	margin: 0em;
+}
+.contact>div {
+	/*padding-right: 2em;*/
+	display: flex;
+	flex-direction: column;
+	margin: 1em;
+	padding-left: 0.5em;
+	background-color: black;
+	width: 18em;
+	justify-content: center;
+}
+
+#s-contact{
+	background-color: yellow;
+
+}
+
+#namePage {
+	justify-content: center;
+}
+
+.contenedor {
+
+}
+
+.class-about {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	/*max-width: 80vw;*/
+	
+	/*justify-content: center;*/
+}
+
+.contactme {
+
+}
+
+.contactme>h1 {
+	margin-left: auto;
+	margin-right: auto;
+	margin: 2rem;
+}
+.edu-card {
+	background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-gap: 1rem;
+    padding: 1.5rem;
+    width: 90%;
+}
+
+.jobs-card {
+	background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-gap: 1rem;
+    padding: 1.5rem;
+    width: 90%;
+}
+
+.modal-dialogg {
+	/*width: 70vw;*/
+	margin: auto;
+}
+
+.edu-port-card {
+	/*display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;*/
+}
+
+#profesion {
+	display: flex;
+	width: 90%;
+	justify-content: flex-end;
+	margin-top: 1em;
+	margin-right: 10%;
+	padding: 0.5em; 
+	background-color: black;
+}
+.modal-title{
+	color:black;
+}
+
+
+.curses-element {
+/*	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	width: 47%;
+	margin: 1%;*/
+}
+
+.jobs-port-card {
+	display: flex;
+	/*flex-direction: column;*/
+	flex-wrap: wrap;
+	justify-content: center;
+	/*align-items: center;*/
+}
+
+#imgg {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+
+.about-rectangulo {
+	height: 4rem;
+	background-color: white;
+	color: black;
+	margin-inline-end: auto;
+	width: 100%;
+	margin-bottom: 2rem;
+	display: inline-table;
+}
+/*992px width*/
+
+
