@@ -1,41 +1,4 @@
-var sec_name = document.querySelector("#section-name");
-var sec_about = document.querySelector("#about");
-let sec_job = document.querySelector("#jobs");
-let sec_edu = document.querySelector("#education");
-let sec_curses = document.querySelector("#curses");
-let sec_cont = document.querySelector("#s-contact");
-let btn_bajar = document.querySelector("#btn_bajar");
 
-alturas = [sec_name.scrollHeight, sec_job.scrollHeight , sec_edu.scrollHeight , sec_curses.scrollHeight ,sec_cont.scrollHeight]
-
-
-var position = 0;
-var modificarPosicion = function (pos) {
-	position = pos;
-}
-
-var bajarPosicion = function () {
-	alt = 0;
-	alturas = [sec_name.scrollHeight, sec_job.scrollHeight , sec_edu.scrollHeight , sec_curses.scrollHeight ,sec_cont.scrollHeight]
-	for (let i = 0; i < (position+1); i++) {
-		alt += alturas[i];
-	}
-	position++;
-	if(position > alturas.length){
-		position = 0;
-		alt = 0;
-	}
-
-	scrollTo(0,alt)
-}
-
-sec_name.addEventListener('mouseenter', function(){modificarPosicion(0)});
-sec_about.addEventListener('mouseenter', function(){modificarPosicion(1)});
-sec_job.addEventListener('mouseenter', function(){modificarPosicion(2)});
-sec_edu.addEventListener('mouseenter', function(){modificarPosicion(3)});
-sec_curses.addEventListener('mouseenter', function(){modificarPosicion(4)});
-sec_cont.addEventListener('mouseenter', function(){modificarPosicion(5)});
-btn_bajar.addEventListener('click', bajarPosicion);
 
 Vue.component("modal-certificado", { // recibe dos argumentos: el nombre del componente y el objeto con las propiedades
 	props: {
@@ -83,3 +46,43 @@ let app = new Vue ({
 		
 	}
 })
+
+
+var sec_name = document.querySelector("#section-name");
+var sec_about = document.querySelector("#about");
+let sec_job = document.querySelector("#jobs");
+let sec_edu = document.querySelector("#education");
+let sec_curses = document.querySelector("#curses");
+let sec_cont = document.querySelector("#s-contact");
+let btn_bajar = document.querySelector("#btn_bajar");
+
+alturas = [sec_name.scrollHeight, sec_job.scrollHeight , sec_edu.scrollHeight , sec_curses.scrollHeight ,sec_cont.scrollHeight]
+
+
+var position = 0;
+var modificarPosicion = function (pos) {
+	position = pos;
+}
+
+var bajarPosicion = function () {
+	alt = 0;
+	alturas = [sec_name.scrollHeight, sec_job.scrollHeight , sec_edu.scrollHeight , sec_curses.scrollHeight ,sec_cont.scrollHeight]
+	for (let i = 0; i < (position+1); i++) {
+		alt += alturas[i];
+	}
+	position++;
+	if(position > alturas.length){
+		position = 0;
+		alt = 0;
+	}
+
+	scrollTo(0,alt)
+}
+
+sec_name.addEventListener('mouseenter', function(){modificarPosicion(0)});
+sec_about.addEventListener('mouseenter', function(){modificarPosicion(1)});
+sec_job.addEventListener('mouseenter', function(){modificarPosicion(2)});
+sec_edu.addEventListener('mouseenter', function(){modificarPosicion(3)});
+sec_curses.addEventListener('mouseenter', function(){modificarPosicion(4)});
+sec_cont.addEventListener('mouseenter', function(){modificarPosicion(5)});
+btn_bajar.addEventListener('click', bajarPosicion);
