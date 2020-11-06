@@ -54,7 +54,7 @@
         </header>
         <!-- <main data-offset="0" data-spy="scroll" data-target="#myScrollspy"> -->
         <main id="app">
-            <section class="sections" id="section-name">
+            <section @mouseover="modificarPosicion(0)" class="sections" id="section-name">
                 <h1>
                     Julian Morganella
                 </h1>
@@ -64,7 +64,7 @@
                     </h2>
                 </div>
             </section>
-            <section class="sections columns" id="about">
+            <section @mouseover="modificarPosicion(1)" class="sections columns" id="about">
                 <div class="col-md-6">
                     <img alt="Imagen de código" src="images/codigo2.png" width="100%"/>
                 </div>
@@ -87,7 +87,7 @@
                     </div>
                 </div>
             </section>
-            <section style="background: linear-gradient(135deg, rgba(1,22,49,1) 0%, rgba(1,22,49,1) 66%, rgba(71,160,228,1) 95%, rgba(71,160,228,1) 100%);">
+            <section @mouseover="modificarPosicion(2)" style="background: linear-gradient(135deg, rgba(1,22,49,1) 0%, rgba(1,22,49,1) 66%, rgba(71,160,228,1) 95%, rgba(71,160,228,1) 100%);">
                 <div class="sections" id="jobs" style="background-image: url('images/curso.jpg');background-repeat:no-repeat;background-position: center;">
                     <h1>
                         Jobs
@@ -143,7 +143,7 @@
                     </div>
                 </div>
             </section>
-            <section class="sections" id="education">
+            <section @mouseover="modificarPosicion(3)" class="sections" id="education">
                 <h1>
                     Education
                 </h1>
@@ -202,7 +202,7 @@
                     </div>
                 </div>
             </section>
-            <section class="sections" id="curses">
+            <section @mouseover="modificarPosicion(4)" class="sections" id="curses">
                 <h1>
                     Cursos
                 </h1>
@@ -275,7 +275,7 @@
                     <img alt="Certificado Javascript - SoloLearn" src="https://www.sololearn.com/Certificate/1024-11192729/jpg/?mode=view" width="100%"/>
                 </modal-certificado>
             </section>
-            <section class="sections" id="s-contact">
+            <section @mouseover="modificarPosicion(5)" class="sections" id="s-contact">
                 <div class="contactme col-md-10 col-lg-10">
                     <h1>
                         Contact me
@@ -310,7 +310,7 @@
                 </div>
             </section>
             <div>
-                <a class="back-to-top" id="btn_bajar">
+                <a @mouseover="salio_boton = true" class="back-to-top" id="btn_bajar" v-bind:href="sec_abajo" v-on:click="clickModificarPosicion">
                     <i class="fa fa-chevron-down">
                     </i>
                 </a>
