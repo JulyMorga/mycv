@@ -30,6 +30,9 @@ nav {
 		height: 9vh;
 		position: fixed;
 	}
+	.navbar-inner {
+		height: 9vh;
+	}
 	.edu-card{
 		width: 30vw;
 	}

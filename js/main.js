@@ -42,8 +42,7 @@ let app = new Vue ({
 		secciones : ["#section-name", "#about" , "#jobs" , "#education", "#curses","#s-contact"],
 		sec_abajo: "#about",
 		disable_abajo: false,
-		disable_abajo: false,
-		salio_boton: true,
+		salio_boton: false,
 	},
 	methods: {
 		modificarPosicion : function (pos) {
@@ -52,7 +51,7 @@ let app = new Vue ({
 
 			let proxima_pos;
 			// 0 5    proxima_pos =1 
-			// 1 5	   proxima_pos =
+			// 1 5	   proxima_pos =2
 			// 5 5    proxima_pos = 0
 			if(this.posicion > (this.secciones.length - 1)){
 				this.posicion = 0;
@@ -65,15 +64,15 @@ let app = new Vue ({
 				proxima_pos = this.posicion + 1;
 				this.disable_abajo = false;
 			}
-			console.log('disable_abajo: '+ this.disable_abajo)
+		
 			this.sec_abajo = this.secciones[proxima_pos];
 		},
 		clickModificarPosicion : function () {
+
 			if(!this.salio_boton){
-				console.log('posicion: '+ this.posicion)
 				this.posicion++;
-				console.log('posicion: '+ this.posicion)
-			}else {
+			}
+			else {
 				this.salio_boton = false;
 			}
 			//pos_act max pos		prox
@@ -81,34 +80,25 @@ let app = new Vue ({
 			// 1  		5	 2 		proxima_pos = 3
 			// 5  		5    0		proxima_pos = 1
 
-			// if(this.posicion >= (this.secciones.length-1)){
-			// 	this.posicion = 0;
-			// }
 			this.modificarPosicion(this.posicion);
-		}
+
+		},
 	},
 	computed: { // computed para las funciones que retornen algo
-		// bajarAPosicion: function() {
-		// 	console.log('pos ant:' + this.posicion)
-		// 	this.posicion++;
-		// 	console.log('pos act:' + this.posicion)
-		// 	if(this.posicion > this.secciones.length){
-		// 		this.posicion = 0;
-		// 	}
-		// 	sec_abajo = this.secciones[this.posicion+1];
-		// 	return this.secciones[this.posicion+1];
-		// },
 		
 	},
 })
 
 
-var sec_name = document.querySelector("#section-name");
-var sec_about = document.querySelector("#about");
-let sec_job = document.querySelector("#jobs");
-let sec_edu = document.querySelector("#education");
-let sec_curses = document.querySelector("#curses");
-let sec_cont = document.querySelector("#s-contact");
+$('.navbar-collapse a').click(function(){
+    $(".navbar-collapse").collapse('hide');
+});
+// var sec_name = document.querySelector("#section-name");
+// var sec_about = document.querySelector("#about");
+// let sec_job = document.querySelector("#jobs");
+// let sec_edu = document.querySelector("#education");
+// let sec_curses = document.querySelector("#curses");
+// let sec_cont = document.querySelector("#s-contact");
 // let btn_bajar = document.querySelector("#btn_bajar");
 
 // alturas = [sec_name.scrollHeight, sec_job.scrollHeight , sec_edu.scrollHeight , sec_curses.scrollHeight ,sec_cont.scrollHeight]
