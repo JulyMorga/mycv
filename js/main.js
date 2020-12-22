@@ -67,7 +67,7 @@ let app = new Vue ({
 		
 			this.sec_abajo = this.secciones[proxima_pos];
 		},
-		clickModificarPosicion : function () {
+		clickModificarPosicion : function (evento) {
 
 			if(!this.salio_boton){
 				this.posicion++;
@@ -81,7 +81,6 @@ let app = new Vue ({
 			// 5  		5    0		proxima_pos = 1
 
 			this.modificarPosicion(this.posicion);
-
 		},
 	},
 	computed: { // computed para las funciones que retornen algo

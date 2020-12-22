@@ -203,9 +203,11 @@
                 </div>
             </section>
             <section @mouseover="modificarPosicion(4)" class="sections" id="curses">
-                <h1>
-                    Cursos
-                </h1>
+                <div class="col-md-10 col-lg-10">
+                    <h1>
+                        Cursos
+                    </h1>
+                </div>
                 <div>
                     <div class="container marketing">
                         <!-- Three columns of text below the carousel -->
@@ -309,8 +311,8 @@
                     </div>
                 </div>
             </section>
-            <div>
-                <a @mouseover="salio_boton = true" class="back-to-top" id="btn_bajar" v-bind:href="sec_abajo" v-on:click="clickModificarPosicion">
+            <div @mouseover="salio_boton = true">
+                <a class="back-to-top" id="btn_bajar" v-bind:href="sec_abajo" v-on:click="clickModificarPosicion">
                     <i class="fa fa-chevron-down">
                     </i>
                 </a>
